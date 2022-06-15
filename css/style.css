@@ -323,7 +323,6 @@ html {
     mix-blend-mode: multiply;
     z-index: 9999;
     pointer-events: none;
-    opacity: 0;
   }
 }
 
