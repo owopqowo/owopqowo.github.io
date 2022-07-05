@@ -31,6 +31,11 @@ const cursor = document.querySelector('.cursor');
 
 window.addEventListener('mousemove', (e) => {
   cursor.style = `transform: translate(${e.clientX}px, ${e.clientY}px)`;
+  if(e.target.tagName === 'A') {
+    cursor.classList.add('active');
+  } else {
+    cursor.classList.remove('active');
+  }
 });
 
 window.addEventListener('DOMContentLoaded', () => {

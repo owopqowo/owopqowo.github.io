@@ -243,6 +243,7 @@ html {
 .project-img > svg {
   position: absolute;
   transition-duration: .5s;
+  z-index: -1;
 }
 .project-img > img {
   position: relative;
@@ -273,7 +274,7 @@ html {
 }
 .tech-list {
   display: flex;
-  margin-top: .5rem;
+  margin-top: 1rem;
 }
 .tech-item {
   font-weight: bold;
@@ -281,6 +282,26 @@ html {
 }
 .tech-item:not(:first-child) {
   margin-left: 1rem;
+}
+
+.btns {
+  display: flex;
+  margin: 1rem -1rem 0;
+}
+.btn {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--baby-pink);
+  border-radius: 4px;
+  font-size: var(--fz-xxs);
+  color: var(--candy-pink);
+  text-decoration: none;
+  transition-duration: .3s;
+}
+.btn:hover {
+  border-color: var(--candy-pink);
+  background: var(--candy-pink);
+  color: var(--white);
 }
 
 @media (min-width: 1200px){
@@ -323,6 +344,22 @@ html {
     mix-blend-mode: multiply;
     z-index: 9999;
     pointer-events: none;
+  }
+  .cursor.active {
+    border: 1px solid var(--candy-pink);
+    background: none;
+  }
+  .cursor.active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: var(--candy-pink);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: multiply;
   }
 }
 
