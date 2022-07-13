@@ -1,3 +1,7 @@
+const MINWIDTH = 1200;
+const strengthItems = document.querySelectorAll('.strength-item');
+let timer;
+
 function randomNumber(min, max) {
   return (Math.random() * (max - min) + min).toFixed(4);
 }
@@ -27,11 +31,34 @@ function addStar(starNum) {
   }
 }
 
-const cursor = document.querySelector('.cursor');
+function matchMediaQuery(minWidth) {
+  if (window.matchMedia(`(min-width: ${minWidth}px)`).matches) {
+    const cursor = document.querySelector('.cursor');
+    if (cursor) return;
+    addEl('span', 'cursor');
+  } else {
+    removeEl('cursor');
+  }
+}
+
+function addEl(tagName, className) {
+  const item = document.createElement(tagName);
+  const body = document.querySelector('body');
+  item.classList.add(className);
+  body.append(item);
+}
+
+function removeEl(className) {
+  const item = document.querySelector(`.${className}`);
+  if (!item) return;
+  item.remove();
+}
 
 window.addEventListener('mousemove', (e) => {
+  const cursor = document.querySelector('.cursor');
+  if (!cursor) return;
   cursor.style = `transform: translate(${e.clientX}px, ${e.clientY}px)`;
-  if(e.target.tagName === 'A') {
+  if (e.target.tagName === 'A') {
     cursor.classList.add('active');
   } else {
     cursor.classList.remove('active');
@@ -40,20 +67,28 @@ window.addEventListener('mousemove', (e) => {
 
 window.addEventListener('DOMContentLoaded', () => {
   addStar(10);
+  matchMediaQuery(MINWIDTH);
 });
 
-const strengthItems = document.querySelectorAll(".strength-item");
-strengthItems.forEach(item => {
-  item.addEventListener("mouseover", () => {
-    const player = item.querySelector("lottie-player");
+window.addEventListener('resize', () => {
+  if (timer) {
+    clearTimeout(timer);
+  }
+  timer = setTimeout(function () {
+    matchMediaQuery(MINWIDTH);
+  }, 1000);
+});
+
+strengthItems.forEach((item) => {
+  item.addEventListener('mouseenter', () => {
+    const player = item.querySelector('lottie-player');
     player.setDirection(1);
     player.play();
   });
 
-  item.addEventListener("mouseleave", () => {
-    const player = item.querySelector("lottie-player");
+  item.addEventListener('mouseleave', () => {
+    const player = item.querySelector('lottie-player');
     player.setDirection(-1);
     player.play();
   });
 });
-
