@@ -226,7 +226,7 @@ html {
   gap: 3rem;
 }
 .project-item:not(:first-child) {
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 .project-tit {
   margin-bottom: 1rem;
@@ -286,11 +286,11 @@ html {
 
 .btns {
   display: flex;
-  margin: 1rem -1rem 0;
+  margin: 1rem -.4rem 0;
 }
 .btn {
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
+  margin: 0 .4rem;
+  padding: .5rem 1rem;
   border: 1px solid var(--baby-pink);
   border-radius: 4px;
   font-size: var(--fz-xxs);
