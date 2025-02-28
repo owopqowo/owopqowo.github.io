@@ -1,9 +1,11 @@
 function App() {
   return (
-    <>
-      <div>
-        <h1>유연한 UI를 설계하는 웹 퍼블리셔 원인정 입니다.</h1>
-        <p>
+    <main className="px-4">
+      <div className="my-[20vh]">
+        <h1 className="text-[min(8.4vw,120px)] font-bold tracking-tight break-keep">
+          유연한 UI를 설계하는 <br />웹 퍼블리셔 원인정 입니다.
+        </h1>
+        <p className="mt-8 text-lg break-keep lg:text-3xl">
           일관된 코드 작성과 최적화된 구조로 효율적인 웹 퍼블리싱을 구현합니다.
           <br />
           유지보수와 확장성을 고려한 퍼블리싱으로 더 안정적인 웹 환경을 제공합니다.
@@ -25,7 +27,7 @@ function App() {
           메일 보내기
         </a>
       </div>
-    </>
+    </main>
   );
 }
 
