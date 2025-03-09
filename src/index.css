@@ -22,20 +22,21 @@
 
 @theme {
   --default-font-family: 'Pretendard';
+  --color-primary: oklch(0.58 0.19 31.91);
 
   --animate-across: across 2s ease-in-out infinite;
   @keyframes across {
     0% {
       opacity: 1;
-      transform: translateX(320px);
+      transform: translateX(100%);
     }
     100% {
       opacity: 1;
-      transform: translateX(-320px);
+      transform: translateX(-300%);
     }
   }
 }
 
 html {
-  @apply bg-neutral-100 text-stone-700;
+  @apply bg-stone-200 text-stone-700;
 }
