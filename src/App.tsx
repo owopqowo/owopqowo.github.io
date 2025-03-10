@@ -32,7 +32,7 @@ function App() {
             <div className="mt-2 min-h-14 text-lg break-keep">
               쉽게 정보를 파악할 수 있도록 구조화된 이용안내 페이지
             </div>
-            <Link to="/project" className="mt-3 inline-block border-b-1">
+            <Link to="/project/0" className="mt-3 inline-block border-b-1">
               More
             </Link>
           </div>
