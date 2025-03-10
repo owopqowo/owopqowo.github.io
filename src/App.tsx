@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 function App() {
   return (
     <>
@@ -16,9 +18,9 @@ function App() {
             <span className="block text-lg">
               유연한 UI를 설계하는 <br />웹 퍼블리셔 원인정 입니다.
             </span>
-            <a href="" className="mt-3 inline-block border-b-1">
+            <Link to="/about" className="mt-3 inline-block border-b-1">
               About
-            </a>
+            </Link>
           </p>
         </div>
         <div className="my-[20vh] grid gap-10 md:grid-cols-2">
@@ -30,9 +32,9 @@ function App() {
             <div className="mt-2 min-h-14 text-lg break-keep">
               쉽게 정보를 파악할 수 있도록 구조화된 이용안내 페이지
             </div>
-            <a href="" className="mt-3 inline-block border-b-1">
+            <Link to="/project" className="mt-3 inline-block border-b-1">
               More
-            </a>
+            </Link>
           </div>
           <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:left-0 before:-z-1 before:w-[110%] before:rotate-40 before:rounded-3xl before:pt-[110%]">
             <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
@@ -40,9 +42,9 @@ function App() {
             </div>
             <div className="mt-12 text-xl font-bold">청주시 새로고침</div>
             <div className="mt-2 min-h-14 text-lg break-keep">사용자의 레벨에 따라 변화하는 애니메이션 구현</div>
-            <a href="" className="mt-3 inline-block border-b-1">
+            <Link to="/project" className="mt-3 inline-block border-b-1">
               More
-            </a>
+            </Link>
           </div>
           <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:-left-1/12 before:-z-1 before:w-[110%] before:rotate-10 before:rounded-3xl before:pt-[110%]">
             <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
@@ -52,9 +54,9 @@ function App() {
             <div className="mt-2 min-h-14 text-lg break-keep">
               디자인 시스템을 적용해 일관된 UI/UX를 구현한 카드 신청 페이지
             </div>
-            <a href="" className="mt-3 inline-block border-b-1">
+            <Link to="/project" className="mt-3 inline-block border-b-1">
               More
-            </a>
+            </Link>
           </div>
           <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:-left-2/12 before:-z-1 before:w-[110%] before:-rotate-70 before:rounded-3xl before:pt-[110%]">
             <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
@@ -64,9 +66,9 @@ function App() {
             <div className="mt-2 min-h-14 text-lg break-keep">
               CSS 애니메이션으로 시각적 요소를 강조한 카드 소개 페이지
             </div>
-            <a href="" className="mt-3 inline-block border-b-1">
+            <Link to="/project" className="mt-3 inline-block border-b-1">
               More
-            </a>
+            </Link>
           </div>
         </div>
       </main>
