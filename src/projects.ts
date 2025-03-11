@@ -1,5 +1,11 @@
 export const projects = [
   {
+    id: 'guide',
+    thumbnail: {
+      image: '/img-1.jpg',
+      title: '지역화폐 이용안내',
+      description: '쉽게 정보를 파악할 수 있도록 구조화된 이용안내 페이지',
+    },
     overview: {
       title: '지역화폐 이용안내',
       description: '개별적으로 운영 중이던 이용안내 페이지를 통합하고 UX를 개선하기 위한 프로젝트',

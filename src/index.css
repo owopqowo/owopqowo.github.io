@@ -22,6 +22,7 @@
 
 @theme {
   --default-font-family: 'Pretendard';
+  --tw-gradient-stops: rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%;
   --color-primary: oklch(0.58 0.19 31.91);
 
   --animate-across: across 2s ease-in-out infinite;

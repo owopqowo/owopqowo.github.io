@@ -1,10 +1,11 @@
 import { Link } from 'react-router';
+import { projects } from './projects';
 
 function App() {
   return (
     <>
       <main className="mx-auto max-w-[1400px] px-4 md:px-10 lg:px-20">
-        <div className="relative grid min-h-dvh grid-rows-[1fr_auto_auto] pb-6 md:grid-cols-[1fr_auto]">
+        <div className="relative grid min-h-[60dvh] grid-rows-[1fr_auto_auto] pt-80 pb-6 md:grid-cols-[1fr_auto]">
           <img
             src="./asterisk.svg"
             alt=""
@@ -24,52 +25,24 @@ function App() {
           </p>
         </div>
         <div className="my-[20vh] grid gap-10 md:grid-cols-2">
-          <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:left-[10%] before:-z-1 before:w-[110%] before:rotate-60 before:rounded-3xl before:pt-[110%]">
-            <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
-              <img src="img-1.jpg" alt="" className="absolute top-0 left-0" />
-            </div>
-            <div className="mt-12 text-xl font-bold">지역화폐 이용안내</div>
-            <div className="mt-2 min-h-14 text-lg break-keep">
-              쉽게 정보를 파악할 수 있도록 구조화된 이용안내 페이지
-            </div>
-            <Link to="/project/0" className="mt-3 inline-block border-b-1">
-              More
-            </Link>
-          </div>
-          <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:left-0 before:-z-1 before:w-[110%] before:rotate-40 before:rounded-3xl before:pt-[110%]">
-            <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
-              <img src="img-2.jpg" alt="" className="absolute top-0 left-0" />
-            </div>
-            <div className="mt-12 text-xl font-bold">청주시 새로고침</div>
-            <div className="mt-2 min-h-14 text-lg break-keep">사용자의 레벨에 따라 변화하는 애니메이션 구현</div>
-            <Link to="/project" className="mt-3 inline-block border-b-1">
-              More
-            </Link>
-          </div>
-          <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:-left-1/12 before:-z-1 before:w-[110%] before:rotate-10 before:rounded-3xl before:pt-[110%]">
-            <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
-              <img src="/img-3.jpeg" alt="" className="absolute top-0 left-0" />
-            </div>
-            <div className="mt-12 text-xl font-bold">PLCC 신청</div>
-            <div className="mt-2 min-h-14 text-lg break-keep">
-              디자인 시스템을 적용해 일관된 UI/UX를 구현한 카드 신청 페이지
-            </div>
-            <Link to="/project" className="mt-3 inline-block border-b-1">
-              More
-            </Link>
-          </div>
-          <div className="before:bg-primary relative overflow-hidden rounded-3xl border-1 border-stone-300 px-6 py-12 before:absolute before:top-[-35%] before:-left-2/12 before:-z-1 before:w-[110%] before:-rotate-70 before:rounded-3xl before:pt-[110%]">
-            <div className="relative mx-auto aspect-9/16 w-2/5 overflow-hidden rounded-2xl border-4 border-neutral-800">
-              <img src="/img-4.jpeg" alt="" className="absolute bottom-0 left-0" />
-            </div>
-            <div className="mt-12 text-xl font-bold">외국인 전용 카드 랜딩 페이지</div>
-            <div className="mt-2 min-h-14 text-lg break-keep">
-              CSS 애니메이션으로 시각적 요소를 강조한 카드 소개 페이지
-            </div>
-            <Link to="/project" className="mt-3 inline-block border-b-1">
-              More
-            </Link>
-          </div>
+          {projects.map((item) => {
+            return (
+              <div className="relative rounded-2xl bg-stone-300 px-6 py-12 md:rounded-4xl" key={item.id}>
+                <div className="relative mx-auto w-2/5 before:absolute before:top-1/2 before:left-1/2 before:aspect-square before:w-[200%] before:-translate-1/2 before:bg-radial">
+                  <div className="relative aspect-9/16 overflow-hidden rounded-lg md:rounded-2xl">
+                    {item.thumbnail.image && (
+                      <img src={item.thumbnail.image} alt="" className="absolute top-0 left-0" />
+                    )}
+                  </div>
+                </div>
+                <div className="mt-12 text-xl font-bold">{item.thumbnail.title}</div>
+                <div className="mt-2 min-h-14 text-lg break-keep">{item.thumbnail.description}</div>
+                <Link to={`/project/${item.id}`} className="mt-3 inline-block border-b-1">
+                  More
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </main>
       <footer className="bg-stone-800 px-4 py-[20vh] text-center">
