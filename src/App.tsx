@@ -1,9 +1,12 @@
 import { Link } from 'react-router';
 import { projects } from './projects';
+import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   return (
     <>
+      <Header />
       <main className="mx-auto max-w-[1400px] px-4 md:px-10 lg:px-20">
         <div className="relative grid min-h-[60dvh] grid-rows-[1fr_auto_auto] pt-80 pb-6 md:grid-cols-[1fr_auto]">
           <img
@@ -45,26 +48,7 @@ function App() {
           })}
         </div>
       </main>
-      <footer className="bg-stone-800 px-4 py-[20vh] text-center">
-        <div className="mb-8">
-          <div className="relative mx-auto h-6 w-72 overflow-hidden text-right">
-            <span className="absolute top-0 right-0 animate-[across_6s_linear_infinite] text-sm text-neutral-100 opacity-0">
-              편하게 연락해 주세요!
-            </span>
-            <span className="absolute top-0 right-0 animate-[across_6s_3s_linear_infinite] text-sm text-neutral-100 opacity-0">
-              편하게 연락해 주세요!
-            </span>
-          </div>
-          <a
-            href="mailto:owo9370@gmail.com"
-            target="_blank"
-            className="font-serif text-3xl tracking-tight text-neutral-100"
-          >
-            owo9370@gmail.com
-          </a>
-        </div>
-        <small className="text-sm text-neutral-100">© 2025 WonInjeong. All rights reserved</small>
-      </footer>
+      <Footer />
     </>
   );
 }
