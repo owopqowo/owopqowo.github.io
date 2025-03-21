@@ -35,7 +35,6 @@ function Project() {
               </div>
             );
           })}
-          <div></div>
         </div>
       </main>
       <Footer />
