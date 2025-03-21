@@ -33,50 +33,64 @@ function ProjectDetail() {
             <span>{data.overview.skill}</span>
           </div>
         </div>
-        <h2 className="mt-10 mb-6 font-serif text-5xl font-bold text-neutral-800">Features</h2>
-        <ul>
-          {data.features.map((item: string, index: number) => {
-            return (
-              <li
-                key={index}
-                className="mt-2 flex items-start text-xl before:mr-1 before:flex-initial before:content-['•']"
-              >
-                <div className="flex-auto">{item}</div>
-              </li>
-            );
-          })}
-        </ul>
-        <h2 className="mt-10 mb-6 font-serif text-5xl font-bold text-neutral-800">Challenges</h2>
-        <ul>
-          {data.challenges.map((item: Challenge, index: number) => {
-            return (
-              <li
-                key={index}
-                className="mt-2 flex items-start text-xl before:mr-1 before:flex-initial before:content-['•']"
-              >
-                <div className="flex-auto">
-                  {item.challenge}
-                  <div className="flex items-start before:mr-1 before:flex-initial before:content-['→']">
-                    <div className="flex-auto">{item.solution}</div>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-        <h2 className="mt-10 mb-6 font-serif text-5xl font-bold text-neutral-800">Next Steps</h2>
-        <ul>
-          {data.next.map((item: string, index: number) => {
-            return (
-              <li
-                key={index}
-                className="mt-2 flex items-start text-xl before:mr-1 before:flex-initial before:content-['•']"
-              >
-                <div className="flex-auto">{item}</div>
-              </li>
-            );
-          })}
-        </ul>
+        {data.features && (
+          <>
+            <h2 className="mt-10 mb-6 font-serif text-5xl font-bold text-neutral-800">Features</h2>
+            <ul>
+              {data.features.map((item: string, index: number) => {
+                return (
+                  <li
+                    key={index}
+                    className="mt-2 flex items-start text-xl before:mr-1 before:flex-initial before:content-['•']"
+                  >
+                    <div className="flex-auto">{item}</div>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        )}
+
+        {data.challenges && (
+          <>
+            <h2 className="mt-10 mb-6 font-serif text-5xl font-bold text-neutral-800">Challenges</h2>
+            <ul>
+              {data.challenges.map((item: Challenge, index: number) => {
+                return (
+                  <li
+                    key={index}
+                    className="mt-2 flex items-start text-xl before:mr-1 before:flex-initial before:content-['•']"
+                  >
+                    <div className="flex-auto">
+                      {item.challenge}
+                      <div className="flex items-start before:mr-1 before:flex-initial before:content-['→']">
+                        <div className="flex-auto">{item.solution}</div>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        )}
+
+        {data.next && (
+          <>
+            <h2 className="mt-10 mb-6 font-serif text-5xl font-bold text-neutral-800">Next Steps</h2>
+            <ul>
+              {data.next.map((item: string, index: number) => {
+                return (
+                  <li
+                    key={index}
+                    className="mt-2 flex items-start text-xl before:mr-1 before:flex-initial before:content-['•']"
+                  >
+                    <div className="flex-auto">{item}</div>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        )}
       </main>
       <Footer />
     </>
