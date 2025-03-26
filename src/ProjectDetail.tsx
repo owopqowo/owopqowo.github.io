@@ -31,6 +31,14 @@ function ProjectDetail() {
             <span>{data.overview.duration}</span>
             <span>사용기술</span>
             <span>{data.overview.skill}</span>
+            {data.overview.link && (
+              <>
+                <span>바로가기</span>
+                <a href={data.overview.link} target="_blank" className="underline">
+                  {data.overview.link}
+                </a>
+              </>
+            )}
           </div>
         </div>
         {data.features && (

@@ -3,7 +3,7 @@ export const projects = [
     id: 'design-system',
     thumbnail: {
       title: '디자인 시스템',
-      description: '일관된 UI/UX 제공을 위한 디자인 시스템 및 컴포넌트 정리',
+      description: '일관된 UI/UX 제공을 위한 사내 디자인 시스템 구축 프로젝트',
     },
     overview: {
       title: '디자인 시스템',
@@ -87,7 +87,7 @@ export const projects = [
     id: 'travle-k',
     thumbnail: {
       title: 'KONA TRAVEL',
-      description: '일관된 스타일과 효율적인 관리가 가능한 어드민 페이지 퍼블리싱',
+      description: '일관된 스타일과 효율적인 관리가 가능한 어드민 페이지',
     },
     overview: {
       title: 'KONA TRAVEL',
@@ -117,13 +117,14 @@ export const projects = [
     id: 'plcc',
     thumbnail: {
       title: 'PLCC 신청',
-      description: '반응형 디자인과 디자인 시스템을 적용한 카드 신청 화면',
+      description: '반응형 디자인과 디자인 시스템을 적용한 카드 신청 페이지',
     },
     overview: {
       title: 'PLCC 신청',
       description: '반응형 UI와 디자인 시스템을 적용하여 일관성과 확장성을 고려한 PLCC 신청 화면',
       duration: '2주',
       skill: 'HTML, SCSS, Javascript',
+      link: 'https://card.usersite.co.kr/jejuair/cards',
     },
     features: [
       '디자인 시스템을 기반으로 통일된 UI 구성',
