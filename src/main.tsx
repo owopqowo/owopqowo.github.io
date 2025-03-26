@@ -2,15 +2,17 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import './index.css';
-import App from './App.tsx';
-import About from './About.tsx';
-import Project from './Project.tsx';
-import ProjectDetail from './ProjectDetail.tsx';
-import NotFound from './NotFound.tsx';
+import App from './App';
+import About from './About';
+import Project from './Project';
+import ProjectDetail from './ProjectDetail';
+import NotFound from './NotFound';
+import ScrollToTop from './ScrollToTop';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="about" element={<About />} />
