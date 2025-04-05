@@ -16,19 +16,12 @@ function Project() {
           <br />
           구현한 기능과 함께 살펴보세요.
         </p>
-        <div className="my-[20vh] grid gap-10 md:grid-cols-2">
+        <div className="my-[20vh] grid gap-6 md:grid-cols-2">
           {projects.map((item) => {
             return (
-              <div className="relative rounded-2xl bg-stone-300 px-6 py-12 md:rounded-4xl" key={item.id}>
-                <div className="relative mx-auto w-2/5 before:absolute before:top-1/2 before:left-1/2 before:aspect-square before:w-[200%] before:-translate-1/2 before:bg-radial">
-                  <div className="relative aspect-9/16 overflow-hidden rounded-lg md:rounded-2xl">
-                    {item.thumbnail.image && (
-                      <img src={item.thumbnail.image} alt="" className="absolute top-0 left-0" />
-                    )}
-                  </div>
-                </div>
-                <div className="mt-12 text-xl font-bold">{item.thumbnail.title}</div>
-                <div className="mt-2 min-h-14 text-lg break-keep">{item.thumbnail.description}</div>
+              <div className="relative rounded-2xl bg-[rgba(0,0,0,0.08)] px-6 py-12 md:rounded-4xl" key={item.id}>
+                <div className="text-4xl font-bold">{item.thumbnail.title}</div>
+                <div className="mt-4 min-h-14 text-lg break-keep">{item.thumbnail.description}</div>
                 <Link to={`/project/${item.id}`} className="mt-3 inline-block border-b-1">
                   More
                 </Link>

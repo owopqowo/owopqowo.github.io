@@ -27,22 +27,43 @@ function App() {
             </Link>
           </p>
         </div>
-        <div className="my-[20vh] grid gap-10 md:grid-cols-2">
-          {projects.map((item) => {
+        <div className="my-24 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-[auto_auto]">
+          {projects.map((item, index) => {
+            let extraClass = '';
+            switch (index) {
+              case 0:
+                extraClass = 'lg:col-span-2 lg:col-start-2 lg:row-start-1';
+                break;
+              case 1:
+                extraClass = 'lg:col-start-1 lg:row-start-1 lg:row-span-1';
+                break;
+              case 2:
+                extraClass = 'lg:col-start-1 lg:col-end-3';
+                break;
+              default:
+                extraClass = '';
+            }
             return (
-              <div className="relative rounded-2xl bg-stone-300 px-6 py-12 md:rounded-4xl" key={item.id}>
-                <div className="relative mx-auto w-2/5 before:absolute before:top-1/2 before:left-1/2 before:aspect-square before:w-[200%] before:-translate-1/2 before:bg-radial">
-                  <div className="relative aspect-9/16 overflow-hidden rounded-lg md:rounded-2xl">
-                    {item.thumbnail.image && (
-                      <img src={item.thumbnail.image} alt="" className="absolute top-0 left-0" />
-                    )}
+              <div
+                className={`group/box flex flex-col items-start overflow-hidden rounded-2xl bg-[rgba(0,0,0,0.08)] px-6 py-8 md:rounded-4xl ${extraClass}`}
+                key={item.id}
+              >
+                {index === 0 && (
+                  <div className="-mx-8 -mt-10 lg:-mt-20 lg:-mb-14">
+                    <img src="/img-design-system.png" alt="" />
                   </div>
-                </div>
-                <div className="mt-12 text-xl font-bold">{item.thumbnail.title}</div>
-                <div className="mt-2 min-h-14 text-lg break-keep">{item.thumbnail.description}</div>
+                )}
+                <div className="pb- text-4xl font-bold break-keep">{item.thumbnail.title}</div>
+                <div className="mt-4 text-lg break-keep">{item.thumbnail.description}</div>
                 <Link to={`/project/${item.id}`} className="mt-3 inline-block border-b-1">
                   More
                 </Link>
+
+                {index === 1 && (
+                  <div className="relative left-1/2 mt-auto -mb-8 w-96 max-w-[130%] -translate-x-1/2">
+                    <img src="/img-guide.png" alt="" />
+                  </div>
+                )}
               </div>
             );
           })}
