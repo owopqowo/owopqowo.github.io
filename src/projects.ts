@@ -84,6 +84,32 @@ export const projects = [
     ],
   },
   {
+    id: 'plcc',
+    thumbnail: {
+      title: 'PLCC 신청',
+      description: '반응형 디자인과 디자인 시스템을 적용한 카드 신청 페이지',
+    },
+    overview: {
+      title: 'PLCC 신청',
+      description: '반응형 UI와 디자인 시스템을 적용하여 일관성과 확장성을 고려한 PLCC 신청 화면',
+      duration: '2주',
+      skill: 'HTML, SCSS, Javascript',
+      link: 'https://card.usersite.co.kr/jejuair/cards',
+    },
+    features: [
+      '디자인 시스템을 기반으로 통일된 UI 구성',
+      '반응형 웹 디자인 적용으로 다양한 디바이스에서 최적화된 화면 제공',
+    ],
+    challenges: [
+      {
+        challenge:
+          '디자인 시스템에서 제공하는 기본 팝업 컴포넌트는 딤(배경)을 클릭하면 닫히도록 설정되어 있었지만, PLCC 신청 프로세스에서는 의도치 않게 닫히는 것을 방지해야 하는 요구사항 존재',
+        solution:
+          '팀원들과 논의한 결과, 이 기능이 다른 프로젝트에서도 활용될 가능성이 높다고 판단하여 디자인 시스템에 옵션을 추가하고, 이를 적용하여 요구사항을 충족',
+      },
+    ],
+  },
+  {
     id: 'travle-k',
     thumbnail: {
       title: 'KONA TRAVEL',
@@ -110,32 +136,6 @@ export const projects = [
       {
         challenge: 'CSS 스타일 관리와 테마 변경이 번거롭고 확장성에 제한',
         solution: '색상, 간격, 라운드 등의 변수를 체계적으로 정리하여 테마 변경과 유지보수를 쉽게 할 수 있도록 개선',
-      },
-    ],
-  },
-  {
-    id: 'plcc',
-    thumbnail: {
-      title: 'PLCC 신청',
-      description: '반응형 디자인과 디자인 시스템을 적용한 카드 신청 페이지',
-    },
-    overview: {
-      title: 'PLCC 신청',
-      description: '반응형 UI와 디자인 시스템을 적용하여 일관성과 확장성을 고려한 PLCC 신청 화면',
-      duration: '2주',
-      skill: 'HTML, SCSS, Javascript',
-      link: 'https://card.usersite.co.kr/jejuair/cards',
-    },
-    features: [
-      '디자인 시스템을 기반으로 통일된 UI 구성',
-      '반응형 웹 디자인 적용으로 다양한 디바이스에서 최적화된 화면 제공',
-    ],
-    challenges: [
-      {
-        challenge:
-          '디자인 시스템에서 제공하는 기본 팝업 컴포넌트는 딤(배경)을 클릭하면 닫히도록 설정되어 있었지만, PLCC 신청 프로세스에서는 의도치 않게 닫히는 것을 방지해야 하는 요구사항 존재',
-        solution:
-          '팀원들과 논의한 결과, 이 기능이 다른 프로젝트에서도 활용될 가능성이 높다고 판단하여 디자인 시스템에 옵션을 추가하고, 이를 적용하여 요구사항을 충족',
       },
     ],
   },
