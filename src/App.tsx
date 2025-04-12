@@ -50,7 +50,7 @@ function App() {
               >
                 {index === 0 && (
                   <div className="-mx-8 -mt-10 lg:-mt-20 lg:-mb-14">
-                    <img src="/img-design-system.png" alt="" />
+                    <img src="./images/img-design-system.png" alt="" />
                   </div>
                 )}
                 <div className="pb- text-4xl font-bold break-keep">{item.thumbnail.title}</div>
@@ -61,7 +61,7 @@ function App() {
 
                 {index === 1 && (
                   <div className="relative left-1/2 mt-auto -mb-8 w-96 max-w-[130%] -translate-x-1/2">
-                    <img src="/img-guide.png" alt="" />
+                    <img src="./images/img-guide.png" alt="" />
                   </div>
                 )}
               </div>

@@ -15,7 +15,7 @@ function About() {
           </div>
         </header>
         <div className="lg:flex lg:items-end">
-          <img src="img-about-1.jpg" alt="" className="lg:relative lg:w-1/2" />
+          <img src="./images/img-about-1.jpg" alt="" className="lg:relative lg:w-1/2" />
           <p className="py-10 text-xl lg:pb-36 lg:pl-20">
             웹 표준과 웹 접근성을 고려하여 작업하며, 각 요소의 의미에 맞는 적절한 태그를 사용하여 구조적이고 이해하기
             쉬운 마크업을 작성합니다. 또한, 유지보수성과 확장성을 높이기 위해 코드의 간결함을 유지하면서도 모듈화된
@@ -31,7 +31,7 @@ function About() {
             협업하는 데 집중합니다. 요구사항을 정확히 파악하고 의견을 조율하며, 최상의 결과물을 만들기 위해 노력합니다.
           </p>
         </div>
-        <img src="img-about-2.jpg" alt="" className="max-w-full lg:mx-auto lg:-mt-16 lg:w-4/5" />
+        <img src="./images/img-about-2.jpg" alt="" className="max-w-full lg:mx-auto lg:-mt-16 lg:w-4/5" />
       </main>
       <Footer />
     </>
